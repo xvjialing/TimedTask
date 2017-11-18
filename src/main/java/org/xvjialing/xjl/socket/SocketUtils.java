@@ -12,6 +12,7 @@ public class SocketUtils {
 
     private static  Socket socket;
     public SocketUtils(){
+        System.out.println("SocketUtils");
         try {
             socket=new Socket(CommonUtils.SOCKET_URL,CommonUtils.SOCKET_PORT);
 //            socket=new Socket("120.78.193.185",8234);

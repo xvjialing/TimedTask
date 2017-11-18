@@ -22,9 +22,7 @@ public class RegularTimerTask extends TimerTask{
             SocketUtils socketUtils=new SocketUtils();
             socketUtils.sendMsg(tag);
             socketUtils.closeSocket();
-
             System.out.println("执行当前时间"+formatter.format(Calendar.getInstance().getTime()));
-
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -42,6 +42,7 @@ public class TimerManager {
 
         if (isRepeat){
             timer.scheduleAtFixedRate(new RegularTimerTask(tag),date,PERIOD_DAY);
+            System.out.println("timerManager repeat");
         }else {
             timer.schedule(new RegularTimerTask(tag),date);
         }

@@ -44,6 +44,7 @@ public class MainService {
     }
 
     public static void startTimer(){
+        System.out.println("startTimer");
         if (taskList.size()==0){
             TimerManager timerManager = new TimerManager(23, 0, "", true);
             timerManagerList.add(timerManager);
@@ -55,6 +56,7 @@ public class MainService {
     }
 
     public static void cancleTimers(){
+        System.out.println("cancleTimers");
         if (timerManagerList.size()!=0){
             for (TimerManager item:timerManagerList){
                 item.stopTimer();
