@@ -13,16 +13,16 @@ public class RegularTimerTask extends TimerTask{
     private String tag;
 
     public RegularTimerTask(String tag) {
-        System.out.println("jump to RegularTimerTask");
+//        System.out.println("jump to RegularTimerTask");
         this.tag = tag;
     }
 
     public void run() {
-        System.out.println("RegularTimerTask run");
+//        System.out.println("RegularTimerTask run");
         try {
             SocketUtils socketUtils=new SocketUtils();
             socketUtils.sendMsg(tag);
-            System.out.println("has send Message");
+//            System.out.println("has send Message");
             socketUtils.closeSocket();
             System.out.println("执行当前时间"+formatter.format(Calendar.getInstance().getTime()));
         }catch (Exception e){

@@ -32,7 +32,7 @@ public class TimerManager {
         //如果第一次执行定时任务的时间 小于 当前的时间
         //此时要在 第一次执行定时任务的时间 加一天，以便此任务在下个时间点执行。如果不加一天，任务会立即执行。循环执行的周期则以当前时间为准
         if (date.before(new Date())) {
-            calendar.add(Calendar.HOUR_OF_DAY,1);
+            calendar.add(Calendar.DAY_OF_MONTH,1);
             date=calendar.getTime();
 //            System.out.println(date);
         }
@@ -42,7 +42,7 @@ public class TimerManager {
 
         if (isRepeat){
             timer.schedule(new RegularTimerTask(tag),date,PERIOD_DAY);
-            System.out.println("timerManager repeat");
+
         }else {
             timer.schedule(new RegularTimerTask(tag),date);
         }
