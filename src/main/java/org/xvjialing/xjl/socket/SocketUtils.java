@@ -1,5 +1,7 @@
 package org.xvjialing.xjl.socket;
 
+import org.xvjialing.xjl.common.CommonUtils;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -11,7 +13,7 @@ public class SocketUtils {
     private static  Socket socket;
     public SocketUtils(){
         try {
-            socket=new Socket("39.106.46.145",8234);
+            socket=new Socket(CommonUtils.SOCKET_URL,CommonUtils.SOCKET_PORT);
 //            socket=new Socket("120.78.193.185",8234);
             outputStream=socket.getOutputStream();
         } catch (IOException e) {

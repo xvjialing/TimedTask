@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.xvjialing.xjl.common.CommonUtils;
 import org.xvjialing.xjl.task.Task;
 
 import java.util.List;
@@ -17,7 +18,7 @@ public class OkhttpUtils {
         okHttpClient = new OkHttpClient();
         request=new Request.Builder()
                 .get()
-                .url("http://45.77.159.109:32772/api/tasks")
+                .url(CommonUtils.REST_SERVICE_URL+"/api/tasks")
                 .build();
     }
 
